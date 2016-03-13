@@ -1,7 +1,5 @@
 package ross.feehan.com.takephoto;
 
-import android.provider.ContactsContract;
-
 import junit.framework.TestCase;
 
 import org.junit.Before;
@@ -11,6 +9,8 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import java.io.File;
+
+import ross.feehan.com.takephoto.Utils.PhotoFileUtils;
 
 import static org.mockito.Mockito.verify;
 
@@ -32,7 +32,8 @@ public class TakePhotoLogicImplTest extends TestCase {
 
     TakePhotoLogicImpl takePhotoLogic;
     @Mock TakePhotoWithDefaultCameraInterface takePhotoWithDefaultCamera;
-    @Mock PhotoFileUtils photoFileUtils;
+    @Mock
+    PhotoFileUtils photoFileUtils;
     @Mock File photoFile;
     @Mock TakePhotoViewInterface view;
 

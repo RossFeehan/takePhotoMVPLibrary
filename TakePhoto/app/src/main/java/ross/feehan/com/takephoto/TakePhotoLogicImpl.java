@@ -2,6 +2,8 @@ package ross.feehan.com.takephoto;
 
 import java.io.File;
 
+import ross.feehan.com.takephoto.Utils.PhotoFileUtils;
+
 /*
  * Created by Ross Feehan on 13/03/2016.
  */
