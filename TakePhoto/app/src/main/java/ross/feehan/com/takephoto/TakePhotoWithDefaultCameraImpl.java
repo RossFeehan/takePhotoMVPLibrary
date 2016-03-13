@@ -1,11 +1,6 @@
-package ross.feehan.com.takephoto; /*
+package ross.feehan.com.takephoto;
+/*
  * Created by Ross Feehan on 13/03/2016.
- *
- * Code Version Created in -
- *
- * Ross Feehan on 13/03/2016
- * 
- * Copyright Fiat Accompli
  */
 
 import android.app.Activity;
