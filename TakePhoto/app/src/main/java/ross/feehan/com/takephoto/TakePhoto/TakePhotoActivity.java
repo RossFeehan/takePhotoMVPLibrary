@@ -10,6 +10,7 @@ import java.io.File;
 
 import javax.inject.Inject;
 
+import ross.feehan.com.takephoto.R;
 import ross.feehan.com.takephoto.Utils.TakePhotoApplication;
 
 
@@ -20,7 +21,12 @@ public class TakePhotoActivity extends AppCompatActivity implements TakePhotoVie
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initUI();
         initDependencies();
+    }
+
+    private void initUI(){
+        setContentView(R.layout.activity_main);
     }
 
     private void initDependencies() {
