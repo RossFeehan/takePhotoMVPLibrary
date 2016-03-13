@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "ross.feehan.com.takephoto"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
     }
@@ -21,7 +21,19 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.android.support:design:23.2.0'
+    //dagger
+    compile 'com.squareup.dagger:dagger:1.+'
+    provided 'com.squareup.dagger:dagger-compiler:1.2.+'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+
+    //testing
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.9.5'
+    testCompile('com.squareup.assertj:assertj-android:1.1.0') {
+        exclude module: 'support-annotations'
+    }
 }
