@@ -1,4 +1,4 @@
-package ross.feehan.com.takephoto;
+package ross.feehan.com.takephoto.TakePhoto;
 /*
  * Created by Ross Feehan on 13/03/2016.
  */

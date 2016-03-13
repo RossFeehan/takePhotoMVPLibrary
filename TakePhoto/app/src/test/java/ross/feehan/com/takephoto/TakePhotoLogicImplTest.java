@@ -10,6 +10,9 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import java.io.File;
 
+import ross.feehan.com.takephoto.TakePhoto.TakePhotoLogicImpl;
+import ross.feehan.com.takephoto.TakePhoto.TakePhotoViewInterface;
+import ross.feehan.com.takephoto.TakePhoto.TakePhotoWithDefaultCameraInterface;
 import ross.feehan.com.takephoto.Utils.PhotoFileUtils;
 
 import static org.mockito.Mockito.verify;
@@ -31,11 +34,13 @@ public class TakePhotoLogicImplTest extends TestCase {
     public static final int RESULT_CODE_FAIL = 0;
 
     TakePhotoLogicImpl takePhotoLogic;
-    @Mock TakePhotoWithDefaultCameraInterface takePhotoWithDefaultCamera;
+    @Mock
+    TakePhotoWithDefaultCameraInterface takePhotoWithDefaultCamera;
     @Mock
     PhotoFileUtils photoFileUtils;
     @Mock File photoFile;
-    @Mock TakePhotoViewInterface view;
+    @Mock
+    TakePhotoViewInterface view;
 
     @Before
     public void setup(){

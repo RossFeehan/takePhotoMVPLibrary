@@ -1,4 +1,4 @@
-package ross.feehan.com.takephoto;
+package ross.feehan.com.takephoto.TakePhoto;
 
 import java.io.File;
 
