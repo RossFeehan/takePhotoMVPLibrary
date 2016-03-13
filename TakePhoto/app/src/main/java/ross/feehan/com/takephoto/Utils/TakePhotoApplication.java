@@ -18,6 +18,9 @@ public class TakePhotoApplication extends Application {
     @Override
     public void onCreate(){
         super.onCreate();
+
+        objectGraph = ObjectGraph.create(getModules().toArray());
+        objectGraph.inject(this);
     }
 
     private List<Object> getModules(){

@@ -11,7 +11,8 @@ import dagger.Module;
 import dagger.Provides;
 import ross.feehan.com.takephoto.Utils.PhotoFileUtils;
 
-@Module(complete = false, library = true)
+@Module(injects = TakePhotoActivity.class,
+        complete = false)
 public class TakePhotoDIModule {
 
     private Activity activity;
@@ -33,6 +34,4 @@ public class TakePhotoDIModule {
                                                                   PhotoFileUtils photoFileUtils){
         return new TakePhotoLogicImpl(takePhotoWithDefaultCamera, photoFileUtils, view);
     }
-
-
 }

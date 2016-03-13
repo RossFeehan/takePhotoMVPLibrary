@@ -8,13 +8,23 @@ import android.support.v7.app.AppCompatActivity;
 
 import java.io.File;
 
+import javax.inject.Inject;
+
+import ross.feehan.com.takephoto.Utils.TakePhotoApplication;
+
 
 public class TakePhotoActivity extends AppCompatActivity implements TakePhotoViewInterface {
+
+    @Inject TakePhotoLogicInterface logic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initDependencies();
+    }
 
+    private void initDependencies() {
+        ((TakePhotoApplication)getApplication()).getObjectGraph().plus(new TakePhotoDIModule(this, this)).inject(this);
     }
 
     //INTERFACE METHODS
