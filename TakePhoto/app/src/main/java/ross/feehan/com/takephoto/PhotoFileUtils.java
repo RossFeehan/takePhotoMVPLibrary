@@ -19,7 +19,7 @@ public class PhotoFileUtils {
     /*Method to create a file to send to the default camera so it knows where to
 		*save the created image
 		*/
-    public static File createFileForDefaultCamera() {
+    public File createFileForDefaultCamera() {
         // Location where the photos will be stored. The created images will be shared
         // between applications and persist after app has been uninstalled.
         File mediaStorageDir = new File(Environment.getExternalStorageDirectory() + "/DCIM/Camera");
@@ -43,5 +43,9 @@ public class PhotoFileUtils {
             e.printStackTrace();
         }
         return image;
+    }
+
+    public void deletePhotoFile(File fileToDelete){
+        fileToDelete.delete();
     }
 }
