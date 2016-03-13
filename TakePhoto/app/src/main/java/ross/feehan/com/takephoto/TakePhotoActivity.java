@@ -6,8 +6,10 @@ package ross.feehan.com.takephoto;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import java.io.File;
 
-public class TakePhotoActivity extends AppCompatActivity {
+
+public class TakePhotoActivity extends AppCompatActivity implements TakePhotoViewInterface {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,4 +17,10 @@ public class TakePhotoActivity extends AppCompatActivity {
 
     }
 
+    //INTERFACE METHODS
+    //TakePhotoViewInterface METHODS
+    @Override
+    public void displayTakenPhoto(File imageFile) {
+
+    }
 }
